@@ -1,0 +1,229 @@
+.main
+{
+    background-color: rgb(255, 255, 255);
+    box-shadow: 0px 0px 10px 3px rgba(0, 0, 0, 0.281);
+    margin: auto auto;
+    border-radius: 40px;
+    position: fixed;
+    width: 95% ;
+    height: 95%;
+    justify-content: center;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    
+}
+.main-rank
+{
+    background-color: #F6F6F6;
+    box-shadow: 0px 0px 10px 3px rgba(0, 0, 0, 0.281);
+    margin: auto auto;
+    border-radius: 40px;
+    position: fixed;
+    width: 95% ;
+    height: 95%;
+    justify-content: center;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    
+}
+.dots
+{
+    display: flex;
+    flex-direction: row;
+    position: relative;
+    left: 30px;
+    top: 30px;
+}
+.dots span
+{
+    width: 15px;
+    height: 15px;
+    border-radius: 50%;
+    margin: 0 5px;
+}
+.bar
+{
+    display: flex;
+    flex-direction: row;
+    position: fixed;
+    bottom: 10%;
+    width: 95%;
+    
+    
+}
+.bar span
+{
+    width: 25%;
+    height: 10px;
+    border-radius: 0;
+    
+}
+.rank-box
+{
+    position: relative;
+    background-color: rgb(255, 255, 255);
+    box-shadow: 0px 0px 5px 1px rgba(0, 0, 0, 0.308);
+    border-radius: 80px;
+    height: 70px;
+    width: 70%; 
+    bottom: 78%;
+    left: 16%;
+
+}
+.rank-square
+{
+    position: relative;
+    background-color: rgb(255, 255, 255);
+    box-shadow: 0px 0px 4px 1px rgba(136, 136, 136, 0.315);
+    border-end-end-radius : 35px;
+    border-bottom-left-radius: 35px; 
+    height: 80%;
+    width: 62%;    
+    left: 20%;
+    top: 10%;
+}
+.rcorner
+{
+    position : relative;
+    border-bottom-left-radius : 35px;
+    border-bottom-right-radius: 35px;
+    border: 8px solid #E9AF05;
+    background-color: transparent;
+    top: 0px;
+    left: 10px;
+    width: 97.5%;
+    height: 98%;
+    padding-top: 25px;
+}
+.tap-bar
+{
+    display: flex;
+    flex-direction: column;
+    position: fixed;
+    top: 18px;
+    bottom: 0;
+    left: 91.5%;
+
+}
+.tap-bar span
+{
+    width: 15px;
+    height: 174.3px;
+    border-radius: 0;
+    
+}
+.red
+{
+    background-color: #E44134;
+}
+.yel
+{
+    background-color: #E9AF05;
+}
+.green
+{
+    background-color: #33A351;
+}
+.blue
+{
+    background-color: #4882E4;
+}
+.font-rank
+{
+    font-family:'Roboto', sans-serif;
+    font-size:40px;
+    margin-left: 80px;
+    padding-top: 4px;
+    
+    
+}
+.font-result
+{
+    font-family:'Roboto', sans-serif;
+    font-size: 15px;
+    margin-left: 23px;
+}
+.font-dohyeon
+{   
+    font-family: 'Do Hyeon', sans-serif;
+}
+.heading
+{
+    position: relative;
+    margin-top: 75px !important;
+    margin-bottom: -20px;
+    
+}
+.row
+{
+    display: flex;
+    flex-direction: row;
+}
+.container
+{
+    width: 40%;
+    position: relative;
+}
+.input
+{
+    position: relative ;
+}
+.fa-search
+{   
+    position: absolute ;
+    color :rgb(65, 65, 65);
+    top: 16px;
+    left: 20px; 
+}
+.fa-calendar
+{
+    position: absolute ;
+    color :rgb(206, 23, 23);
+    top: 16px;
+    left: 88%;
+}
+.fa-user
+{
+    position: absolute ;
+    color :#33A351;
+    top: 16px;
+    left: 94%;
+}
+.form-control:focus
+{
+    color: #495057;
+    background-color: #fff ;
+    border-color: #ced4da;
+    box-shadow: 0px 0px 3px 2px rgba(223, 223, 223, 0.712) !important;
+    
+}
+.form-control:hover
+{
+    box-shadow: 0px 0px 3px 2px rgba(223, 223, 223, 0.712) !important
+}
+.form-control 
+{ 
+    border-radius: 30px !important;
+    width: 100%;
+}
+
+.btn
+{
+    background-color: rgb(247, 247, 247);
+    width: 220px;
+    margin-top: 30px;
+}
+.btn:hover
+{
+    box-shadow: 0px 0px 1px 1px rgb(218, 218, 218) !important
+}
+.btn:focus
+{
+    border-color: rgb(230, 230, 230);
+    box-shadow: 0px 0px 1px 1px rgb(218, 218, 218) !important
+}
+/* alert */
