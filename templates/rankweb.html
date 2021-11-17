@@ -33,10 +33,11 @@
                 <!-- {{message}}
                     but we have '{{"".join(kw[1])}}'         -->
                 {% for message in get_flashed_messages() %}
+                    <!-- <strong>{{message}}</strong> but we have '{{"".join(kw[1])}}' -->
                 <!-- <div class="alert alert-warning alert-dismissible fade show" role="alert">
                     <strong>{{message}}</strong> but we have '{{"".join(kw[1])}}'
                     <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button> -->
-                    <!-- <div class="modal fade" id="staticBackdrop" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1"
+                    <div class="modal fade" id="staticBackdrop" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1"
                         aria-labelledby="staticBackdropLabel" aria-hidden="true">
                         <div class="modal-dialog">
                             <div class="modal-content">
@@ -54,7 +55,6 @@
                             </div>
                         </div>
                     </div>
-                    </div> -->
                 {%endfor%}
 
                 {%for i in range(0,len(kw[0]))%}
