@@ -1,5 +1,4 @@
-from flask import Flask, render_template,request,redirect,flash,url_for
-from flask.helpers import url_for
+from flask import Flask, render_template,request,redirect,flash
 from SearchEngine import SearchEngine
 import numpy as np
 from nltk.corpus import wordnet
