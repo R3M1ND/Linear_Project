@@ -88,7 +88,7 @@ def search():
         print('pagerankWord :',pagerankWord)
         print('pagerankLen :',pagerankLen)
         # #matrix zone
-        
+
         # print('Matrix A =',matrixA,'len:',len(matrixA))
 
         # #Method : multiply matrix A and r
@@ -205,11 +205,9 @@ def search():
                 
                 if word in data:    
                     #matrixB.append(data)
-                    result.append(data)
+                    result.append(data)       
 
-        
-
-    return render_template('rankweb.html',search = search,kw = result[:20] , enumerate = enumerate , len = len ,pagerankWord = pagerankWord,tempkw = tempkw)
+    return render_template('rankweb.html',search = search,kw = result[:20] ,len = len ,pagerankWord = pagerankWord,tempkw = tempkw)
 
 if __name__ == '__main__':  
     app.debug = True
