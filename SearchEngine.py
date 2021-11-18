@@ -1,4 +1,5 @@
-
+import nltk
+from nltk.corpus import wordnet
 from nltk import stem
 import re
 import json
@@ -144,24 +145,28 @@ class SearchEngine:
         return result
 
     def search_by_keyword(self, **kwargs):
-        check = []
+        #check 0 is keyword found
+        #check 1 is keyword not found
+        check = [0]
         return_value = kwargs['return_value']
         keyword = kwargs['keyword']
         try:
             number_of_result = kwargs['number_of_result']
         except:
             number_of_result = 10
-
         r = self._perform_search(keyword)
+        if r is not None:
+            check.append(keyword)
         if r is None:
             # Keyword does not math any result
             re_corrected_keyword = self.re_correction_sentence(keyword)
             r = self._perform_search(re_corrected_keyword)
             print(f"No result for {keyword}")
             print(f"Showing result of '{re_corrected_keyword}'")
-            #not have -> ![]
+            #not have == False
+            check.pop(0)
+            check.append(1)
             check.append(re_corrected_keyword)
-
         result = []
         n = 0
         for data in r:
@@ -170,7 +175,6 @@ class SearchEngine:
             sentence = r[data][return_value]
             result.append(sentence)
             n += 1
-
         return result,check
 
 
@@ -282,12 +286,16 @@ if __name__ == "__main__":
     # print(se.spell.spell_correction("bird"))
     # sp = SpellCorrection(None, dictionary_path="dictionary.txt")
     # print(sp.spell_correction('ola'))
-
     kw = input("Enter search keywords : ")
-    x = se.search_by_keyword(keyword=kw, return_value ='Quote',number_of_result = 20)
+    x = se.search_by_keyword(keyword=kw, return_value ='Quote',number_of_result = 10)
+    '''for i in x[0]:
+        #print(i)
+        if kw in i:
+            print("Hey WEFOUND!!!!!!!!!!!!!!!")
+            print(i)'''
     if x[1]==[]:
         print("EIEI mee ja")
     elif x[1]!=[]:
         print(f"EiEI Not have na {x[1]}")
-    for i,data in enumerate(x):
+    for i,data in enumerate(x[0]):
         print(i+1,data.replace(kw,"'"+kw+"'"))

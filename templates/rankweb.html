@@ -33,16 +33,16 @@
                 <!-- {{message}}
                     but we have '{{"".join(kw[1])}}'         -->
                 {% for message in get_flashed_messages() %}
-                    <strong>{{message}}</strong> but we have '{{"".join(kw[1])}}'
+                    <div class="font-result-head"><strong>{{message}}</strong> but we have ' {{"".join(tempkw)}} ' and synonyms of ' {{"".join(tempkw)}} '</div>
                     <!-- <div class="alert alert-warning alert-dismissible fade show" role="alert">
                     <strong>{{message}}</strong> but we have '{{"".join(kw[1])}}'
                     <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button> -->
                         
                 {%endfor%}
 
-                {%for i in range(0,len(kw[0]))%}
+                {%for i in range(0,len(kw))%}
                     <div class="font-result">        
-                            {{i+1}}. {{kw[0][i]}}
+                            {{i+1}}. {{kw[i]}}
                     </div>
                 {%endfor%}
             </div>
