@@ -177,7 +177,30 @@ class SearchEngine:
             n += 1
         return result,check
 
-
+    def search_by_keyword_NoVERSION(self, **kwargs):
+        #check 0 is keyword found
+        #check 1 is keyword not found
+        check = [0]
+        return_value = kwargs['return_value']
+        keyword = kwargs['keyword']
+        try:
+            number_of_result = kwargs['number_of_result']
+        except:
+            number_of_result = 10
+        r = self._perform_search(keyword)
+        if r is not None:
+            check.append(keyword)
+        result = []
+        n = 0
+        if r is None:
+            return [],check
+        for data in r:
+            if n >= number_of_result:
+                break
+            sentence = r[data][return_value]
+            result.append(sentence)
+            n += 1
+        return result,check
 def clean_non_alpha(text):
     chars = '-\''
     for c in chars:

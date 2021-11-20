@@ -7,7 +7,6 @@ app = Flask(__name__)
 app.config['SECRET_KEY'] = 'mykey'
 se = SearchEngine("zen_record.txt")
 
-
 def bubbleSort(arr,lstStr):
     n = len(arr)
     for i in range(n-1):
@@ -16,6 +15,7 @@ def bubbleSort(arr,lstStr):
                 arr[j], arr[j + 1] = arr[j + 1], arr[j]
                 lstStr[j], lstStr[j + 1] = lstStr[j + 1], lstStr[j]
     return arr,lstStr
+
 #---------------------------------------------------------------------
 @app.route('/')
 def Home():
@@ -68,7 +68,7 @@ def search():
         lstlenSyn=[]
         for word in lstSyn:
             matrixB=[]
-            x = se.search_by_keyword(keyword=word, return_value ='Quote',number_of_result = 10)
+            x = se.search_by_keyword_NoVERSION(keyword=word, return_value ='Quote',number_of_result = 10)
             for i,data in enumerate(x[0]):
                 
                 if word in data:    
@@ -199,7 +199,7 @@ def search():
             wordPage.append(i)
         result=[]
         for word in wordPage:
-            x = se.search_by_keyword(keyword=word, return_value ='Quote',number_of_result = 10)
+            x = se.search_by_keyword_NoVERSION(keyword=word, return_value ='Quote',number_of_result = 10)
             for i,data in enumerate(x[0]):
                 
                 if word in data:    
