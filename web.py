@@ -204,8 +204,7 @@ def search():
                 
                 if word in data:    
                     #matrixB.append(data)
-                    result.append(data)       
-
+                    result.append(data)
     return render_template('rankweb.html',search = search,kw = result[:20] ,len = len ,pagerankWord = pagerankWord,tempkw = tempkw)
 
 if __name__ == '__main__':  
