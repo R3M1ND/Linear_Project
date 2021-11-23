@@ -207,7 +207,7 @@ def search():
                         #matrixB.append(data)
                         result.append(data)
         else:
-            x = se.search_by_keyword(keyword=search, return_value ='Quote',number_of_result = 10)
+            x = se.search_by_keyword(keyword=search, return_value ='Quote',number_of_result = 20)
             pagerankWord=[]
             tempkw=search
             result=[]
